@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ACM on Shaco&#39;s blog</title>
+    <link>https://Sh4c0.github.io/categories/acm/</link>
+    <description>Recent content in ACM on Shaco&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 28 Sep 2020 00:23:16 +0800</lastBuildDate>
+    
+	<atom:link href="https://Sh4c0.github.io/categories/acm/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>线段树</title>
+      <link>https://Sh4c0.github.io/post/%E7%BA%BF%E6%AE%B5%E6%A0%91/</link>
+      <pubDate>Mon, 28 Sep 2020 00:23:16 +0800</pubDate>
+      
+      <guid>https://Sh4c0.github.io/post/%E7%BA%BF%E6%AE%B5%E6%A0%91/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
