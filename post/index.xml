@@ -6,18 +6,29 @@
     <description>Recent content in Posts on Shaco&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 28 Sep 2020 00:23:16 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 20 Oct 2020 16:21:39 +0800</lastBuildDate>
     
 	<atom:link href="https://Sh4c0.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>线段树</title>
+      <title>2020hncpc赛后总结</title>
+      <link>https://Sh4c0.github.io/post/2020hncpcshzj/</link>
+      <pubDate>Tue, 20 Oct 2020 16:21:39 +0800</pubDate>
+      
+      <guid>https://Sh4c0.github.io/post/2020hncpcshzj/</guid>
+      <description>打比赛之前觉得有奖就行，打完之后虽然有奖但还是不太开心，队伍的缺陷和自身的问题也暴露出了很多。 一开始开的A题，然后发现是签到题，简单的暴力就可以过了，我码到一半觉得脑子有点乱，然后余伟豪继续码完ac了。然后B题余伟豪说是dfs然后开始写，我和义右开始看C，漏看了绝对值，没有更早发现是异或。然后和余伟豪一起改了B题的bug过了。看榜之后开始一起看G发现只要把每行求和之后再相减判断就可以了，我上机ac了。到这里的时候我们队手速都还可以。然后一起看的I.讨论完思路之后(中间因为没有发现三条线段都平行x轴耽误了很多时间)，因为很少写这类题，直接抄的板子上的求交点，然后余伟豪和义右一起看C题，抄完板子过了样例之后交上去wa了，打印下来余伟豪上机写C然后也wa了，我改板子又wa了两发之后，和义右讨论了一下，把代码全部重写，一样的思路居然ac了就挺离谱的，之后的时间就三个人一起讨论了C题之后，和义右一起看了下D题，有大概的思路之后开始码，然后时间确实不够了，思路也没理清。 总结下来大概有这么几个问题。 1.很多板块都只有一个人负责，很多时候队友之间的思路只有自己知道，其他人完全理解不了，C题我是完全没学过数论，不然就可以给余伟豪更多帮助了。 2.对板子不熟悉加上过于迷信板子，本来I题可以更早过的也不会wa3次，可能我就有时间能把D过了。 3.读题太过于草率了，很多个题都有第一遍读题漏了条件的情况，有的中 文题都有这种情况发生。 4.心态还是不够好，有点被外界环境影响。</description>
+    </item>
+    
+    <item>
+      <title>洛谷P3373</title>
       <link>https://Sh4c0.github.io/post/%E7%BA%BF%E6%AE%B5%E6%A0%91/</link>
       <pubDate>Mon, 28 Sep 2020 00:23:16 +0800</pubDate>
       
       <guid>https://Sh4c0.github.io/post/%E7%BA%BF%E6%AE%B5%E6%A0%91/</guid>
-      <description></description>
+      <description>传送门  题目大意 两种区间修改（乘一个数和加一个数），区间查询
+ 思路 一开始的想法是两个lazy标记，更新任何一个lazy标记的时候把另外一个lazy标记也同时下放。
+后来看了题解之后发现了更优的做法，加法lazy标记更新时直接按一般的lazy标记更新即可，而乘法lazy标记</description>
     </item>
     
   </channel>

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>
-洛谷P3373
+2020hncpc赛后总结
  | Shaco&#39;s blog</title>
 
     
@@ -21,25 +21,21 @@
 
 <meta name="generator" content="Hugo 0.73.0" />
 
-<link rel="canonical" href="https://Sh4c0.github.io/post/%E7%BA%BF%E6%AE%B5%E6%A0%91/" />
+<link rel="canonical" href="https://Sh4c0.github.io/post/2020hncpcshzj/" />
 
 
-<meta property="og:title" content="洛谷P3373" />
-<meta property="og:description" content="传送门  题目大意 两种区间修改（乘一个数和加一个数），区间查询
- 思路 一开始的想法是两个lazy标记，更新任何一个lazy标记的时候把另外一个lazy标记也同时下放。
-后来看了题解之后发现了更优的做法，加法lazy标记更新时直接按一般的lazy标记更新即可，而乘法lazy标记" />
+<meta property="og:title" content="2020hncpc赛后总结" />
+<meta property="og:description" content="打比赛之前觉得有奖就行，打完之后虽然有奖但还是不太开心，队伍的缺陷和自身的问题也暴露出了很多。 一开始开的A题，然后发现是签到题，简单的暴力就可以过了，我码到一半觉得脑子有点乱，然后余伟豪继续码完ac了。然后B题余伟豪说是dfs然后开始写，我和义右开始看C，漏看了绝对值，没有更早发现是异或。然后和余伟豪一起改了B题的bug过了。看榜之后开始一起看G发现只要把每行求和之后再相减判断就可以了，我上机ac了。到这里的时候我们队手速都还可以。然后一起看的I.讨论完思路之后(中间因为没有发现三条线段都平行x轴耽误了很多时间)，因为很少写这类题，直接抄的板子上的求交点，然后余伟豪和义右一起看C题，抄完板子过了样例之后交上去wa了，打印下来余伟豪上机写C然后也wa了，我改板子又wa了两发之后，和义右讨论了一下，把代码全部重写，一样的思路居然ac了就挺离谱的，之后的时间就三个人一起讨论了C题之后，和义右一起看了下D题，有大概的思路之后开始码，然后时间确实不够了，思路也没理清。 总结下来大概有这么几个问题。 1.很多板块都只有一个人负责，很多时候队友之间的思路只有自己知道，其他人完全理解不了，C题我是完全没学过数论，不然就可以给余伟豪更多帮助了。 2.对板子不熟悉加上过于迷信板子，本来I题可以更早过的也不会wa3次，可能我就有时间能把D过了。 3.读题太过于草率了，很多个题都有第一遍读题漏了条件的情况，有的中 文题都有这种情况发生。 4.心态还是不够好，有点被外界环境影响。" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://Sh4c0.github.io/post/%E7%BA%BF%E6%AE%B5%E6%A0%91/" />
-<meta property="article:published_time" content="2020-09-28T00:23:16+08:00" />
-<meta property="article:modified_time" content="2020-09-28T00:23:16+08:00" />
+<meta property="og:url" content="https://Sh4c0.github.io/post/2020hncpcshzj/" />
+<meta property="article:published_time" content="2020-10-20T16:21:39+08:00" />
+<meta property="article:modified_time" content="2020-10-20T16:21:39+08:00" />
 
 
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="洛谷P3373"/>
-<meta name="twitter:description" content="传送门  题目大意 两种区间修改（乘一个数和加一个数），区间查询
- 思路 一开始的想法是两个lazy标记，更新任何一个lazy标记的时候把另外一个lazy标记也同时下放。
-后来看了题解之后发现了更优的做法，加法lazy标记更新时直接按一般的lazy标记更新即可，而乘法lazy标记"/>
+<meta name="twitter:title" content="2020hncpc赛后总结"/>
+<meta name="twitter:description" content="打比赛之前觉得有奖就行，打完之后虽然有奖但还是不太开心，队伍的缺陷和自身的问题也暴露出了很多。 一开始开的A题，然后发现是签到题，简单的暴力就可以过了，我码到一半觉得脑子有点乱，然后余伟豪继续码完ac了。然后B题余伟豪说是dfs然后开始写，我和义右开始看C，漏看了绝对值，没有更早发现是异或。然后和余伟豪一起改了B题的bug过了。看榜之后开始一起看G发现只要把每行求和之后再相减判断就可以了，我上机ac了。到这里的时候我们队手速都还可以。然后一起看的I.讨论完思路之后(中间因为没有发现三条线段都平行x轴耽误了很多时间)，因为很少写这类题，直接抄的板子上的求交点，然后余伟豪和义右一起看C题，抄完板子过了样例之后交上去wa了，打印下来余伟豪上机写C然后也wa了，我改板子又wa了两发之后，和义右讨论了一下，把代码全部重写，一样的思路居然ac了就挺离谱的，之后的时间就三个人一起讨论了C题之后，和义右一起看了下D题，有大概的思路之后开始码，然后时间确实不够了，思路也没理清。 总结下来大概有这么几个问题。 1.很多板块都只有一个人负责，很多时候队友之间的思路只有自己知道，其他人完全理解不了，C题我是完全没学过数论，不然就可以给余伟豪更多帮助了。 2.对板子不熟悉加上过于迷信板子，本来I题可以更早过的也不会wa3次，可能我就有时间能把D过了。 3.读题太过于草率了，很多个题都有第一遍读题漏了条件的情况，有的中 文题都有这种情况发生。 4.心态还是不够好，有点被外界环境影响。"/>
 
 
 <link rel="stylesheet" href="/css/github-markdown.css" />
@@ -91,30 +87,30 @@
     <section class="ui top attached segment" id="dream-save-post-as-img">
       <header style="margin-top: 0 !important;">
         <h2 class="ui header">
-          洛谷P3373
-          <div class="sub header">@ shaco · Monday, Sep 28, 2020 · 1 分钟阅读 · 更新于 Sep 28, 2020</div>
+          2020hncpc赛后总结
+          <div class="sub header">@ shaco · Tuesday, Oct 20, 2020 · 1 分钟阅读 · 更新于 Oct 20, 2020</div>
         </h2>
       </header>
 
       
-        <img class="ui image" style="margin-top: 2rem;" src="/images/%e7%ba%bf%e6%ae%b5%e6%a0%91.jpg" />
+        <img class="ui image" style="margin-top: 2rem;" src="/images/2020hncpcshzj.jpg" />
       
 
-      <article style="margin-top: 2rem;"><h2 id="传送门httpswwwluogucomcnproblemp3373"><a href="https://www.luogu.com.cn/problem/P3373">传送门</a></h2>
-<hr>
-<h2 id="题目大意">题目大意</h2>
-<p>两种区间修改（乘一个数和加一个数），区间查询</p>
-<hr>
-<h2 id="思路">思路</h2>
-<p>一开始的想法是两个lazy标记，更新任何一个lazy标记的时候把另外一个lazy标记也同时下放。<br>
-后来看了题解之后发现了更优的做法，加法lazy标记更新时直接按一般的lazy标记更新即可，而乘法lazy标记</p>
+      <article style="margin-top: 2rem;"><p>打比赛之前觉得有奖就行，打完之后虽然有奖但还是不太开心，队伍的缺陷和自身的问题也暴露出了很多。
+一开始开的A题，然后发现是签到题，简单的暴力就可以过了，我码到一半觉得脑子有点乱，然后余伟豪继续码完ac了。然后B题余伟豪说是dfs然后开始写，我和义右开始看C，漏看了绝对值，没有更早发现是异或。然后和余伟豪一起改了B题的bug过了。看榜之后开始一起看G发现只要把每行求和之后再相减判断就可以了，我上机ac了。到这里的时候我们队手速都还可以。然后一起看的I.讨论完思路之后(中间因为没有发现三条线段都平行x轴耽误了很多时间)，因为很少写这类题，直接抄的板子上的求交点，然后余伟豪和义右一起看C题，抄完板子过了样例之后交上去wa了，打印下来余伟豪上机写C然后也wa了，我改板子又wa了两发之后，和义右讨论了一下，把代码全部重写，一样的思路居然ac了就挺离谱的，之后的时间就三个人一起讨论了C题之后，和义右一起看了下D题，有大概的思路之后开始码，然后时间确实不够了，思路也没理清。
+总结下来大概有这么几个问题。
+1.很多板块都只有一个人负责，很多时候队友之间的思路只有自己知道，其他人完全理解不了，C题我是完全没学过数论，不然就可以给余伟豪更多帮助了。
+2.对板子不熟悉加上过于迷信板子，本来I题可以更早过的也不会wa3次，可能我就有时间能把D过了。
+3.读题太过于草率了，很多个题都有第一遍读题漏了条件的情况，有的中
+文题都有这种情况发生。
+4.心态还是不够好，有点被外界环境影响。</p>
 </article>
     </section>
 
     <footer class="ui attached segment dream-tags">
       
         
-          <a class="ui label" href="/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91" title="线段树">线段树</a>
+          <a class="ui label" href="/tags/%E8%B5%9B%E5%90%8E%E6%80%BB%E7%BB%93" title="赛后总结">赛后总结</a>
         
       
       <div

@@ -12,12 +12,14 @@
     
     
     <item>
-      <title>线段树</title>
+      <title>洛谷P3373</title>
       <link>https://Sh4c0.github.io/post/%E7%BA%BF%E6%AE%B5%E6%A0%91/</link>
       <pubDate>Mon, 28 Sep 2020 00:23:16 +0800</pubDate>
       
       <guid>https://Sh4c0.github.io/post/%E7%BA%BF%E6%AE%B5%E6%A0%91/</guid>
-      <description></description>
+      <description>传送门  题目大意 两种区间修改（乘一个数和加一个数），区间查询
+ 思路 一开始的想法是两个lazy标记，更新任何一个lazy标记的时候把另外一个lazy标记也同时下放。
+后来看了题解之后发现了更优的做法，加法lazy标记更新时直接按一般的lazy标记更新即可，而乘法lazy标记</description>
     </item>
     
   </channel>
