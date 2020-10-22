@@ -6,10 +6,19 @@
     <description>Recent content in ACM on Shaco&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 20 Oct 2020 16:21:39 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 22 Oct 2020 21:38:43 +0800</lastBuildDate>
     
 	<atom:link href="https://Sh4c0.github.io/categories/acm/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Hdu100题</title>
+      <link>https://Sh4c0.github.io/post/hdu100%E9%A2%98/</link>
+      <pubDate>Thu, 22 Oct 2020 21:38:43 +0800</pubDate>
+      
+      <guid>https://Sh4c0.github.io/post/hdu100%E9%A2%98/</guid>
+      <description>&lt;p&gt;著名的hdu100题题解&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>2020hncpc赛后总结</title>

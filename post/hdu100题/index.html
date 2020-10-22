@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>
+Hdu100题
+ | Shaco&#39;s blog</title>
+
+    
+  <link href="/images/favicon.png" rel="shortcut icon" type="image/x-icon" />
+
+
+
+  
+  <meta name="author" content="Shaco" />
+  <meta name="description" content="" />
+
+
+
+<meta name="generator" content="Hugo 0.73.0" />
+
+<link rel="canonical" href="https://Sh4c0.github.io/post/hdu100%E9%A2%98/" />
+
+
+<meta property="og:title" content="Hdu100题" />
+<meta property="og:description" content="著名的hdu100题题解" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://Sh4c0.github.io/post/hdu100%E9%A2%98/" />
+<meta property="og:image" content="https://Sh4c0.github.io/images/hdu100%E9%A2%98.jpg" />
+<meta property="article:published_time" content="2020-10-22T21:38:43+08:00" />
+<meta property="article:modified_time" content="2020-10-22T21:38:43+08:00" />
+
+
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://Sh4c0.github.io/images/hdu100%E9%A2%98.jpg"/>
+
+<meta name="twitter:title" content="Hdu100题"/>
+<meta name="twitter:description" content="著名的hdu100题题解"/>
+
+
+<link rel="stylesheet" href="/css/github-markdown.css" />
+<link rel="stylesheet" href="/css/semantic.min.css" />
+<link rel="stylesheet" href="/css/site.css" />
+
+
+<style>
+  a {
+    color: seagreen !important;
+  }
+</style>
+
+
+
+<style>
+  .inverted a {
+     color: darkseagreen !important;
+  }
+</style>
+
+
+  </head>
+
+  
+  <body style="background-image: url(/images/bg.jpg);">
+  
+    <div class="flip-container">
+      <div class="flipper">
+        <section class="front">
+          
+<nav class="ui secondary inverted menu dream-menu">
+
+  <div class="item">
+    <i class="large link bullseye icon dream-flip-toggle" title="翻转！"></i>
+  </div>
+  <div class="item">
+    <i class="large link home icon" title="首页" onclick="window.location.href = 'https:\/\/Sh4c0.github.io\/'"></i>
+  </div>
+  <div class="item">
+    <i class="large link icon theme-switch" onclick="themeSwitch()"></i>
+  </div>
+</nav>
+
+          
+<div class="ui centered relaxed grid dream-grid">
+  <div class="sixteen wide mobile sixteen wide tablet twelve wide computer column markdown-body dream-single">
+
+    <section class="ui top attached segment" id="dream-save-post-as-img">
+      <header style="margin-top: 0 !important;">
+        <h2 class="ui header">
+          Hdu100题
+          <div class="sub header">@ shaco · Thursday, Oct 22, 2020 · 3 分钟阅读 · 更新于 Oct 22, 2020</div>
+        </h2>
+      </header>
+
+      
+
+      <article style="margin-top: 2rem;"><p>著名的hdu100题题解</p>
+<h3 id="前言">前言</h3>
+<p>最近一段时间因为课业繁忙，~~实际是因为自己太懒了，~~实在没有心思继续学新的算法。然后因为入门的时候路子比较野，每次总感觉自己是不是有什么基础的东西没有学到，又久闻杭电入门100题的大名，所以决定写写水题维持一下手感。大概预计花个一周时间吧。然后也会把之前写过的一些题陆陆续续搬到博客上来。</p>
+<h3 id="hdu2000httpacmhdueducnshowproblemphppid2000"><a href="http://acm.hdu.edu.cn/showproblem.php?pid=2000">hdu2000</a></h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;iostream&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">using</span> <span style="color:#66d9ef">namespace</span> std;
+
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+    ios<span style="color:#f92672">::</span>sync_with_stdio(false);
+    cin.tie(<span style="color:#ae81ff">0</span>);
+    <span style="color:#66d9ef">char</span> a, b, c;
+    <span style="color:#66d9ef">while</span> (cin <span style="color:#f92672">&gt;&gt;</span> a <span style="color:#f92672">&gt;&gt;</span> b <span style="color:#f92672">&gt;&gt;</span> c) {
+        <span style="color:#66d9ef">if</span> (a <span style="color:#f92672">&gt;</span> b)
+            swap(a, b);
+        <span style="color:#66d9ef">if</span> (b <span style="color:#f92672">&gt;</span> c)
+            swap(b, c);
+        <span style="color:#66d9ef">if</span> (a <span style="color:#f92672">&gt;</span> b)
+            swap(a, b);
+        cout <span style="color:#f92672">&lt;&lt;</span> a <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34; &#34;</span> <span style="color:#f92672">&lt;&lt;</span> b <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34; &#34;</span> <span style="color:#f92672">&lt;&lt;</span> c <span style="color:#f92672">&lt;&lt;</span> endl;
+    }
+    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}
+</code></pre></div><h3 id="hdu2001httpacmhdueducnshowproblemphppid2001"><a href="http://acm.hdu.edu.cn/showproblem.php?pid=2001">hdu2001</a></h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;cmath&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;cstdio&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">using</span> <span style="color:#66d9ef">namespace</span> std;
+
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+    <span style="color:#66d9ef">double</span> x1, x2, y1, y2;
+    <span style="color:#66d9ef">while</span> (<span style="color:#f92672">~</span>scanf(<span style="color:#e6db74">&#34;%lf %lf %lf %lf&#34;</span>, <span style="color:#f92672">&amp;</span>x1, <span style="color:#f92672">&amp;</span>y1, <span style="color:#f92672">&amp;</span>x2, <span style="color:#f92672">&amp;</span>y2)) {
+        printf(<span style="color:#e6db74">&#34;%.2f</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, sqrt((x1 <span style="color:#f92672">-</span> x2) <span style="color:#f92672">*</span> (x1 <span style="color:#f92672">-</span> x2) <span style="color:#f92672">+</span> (y1 <span style="color:#f92672">-</span> y2) <span style="color:#f92672">*</span> (y1 <span style="color:#f92672">-</span> y2)));
+    }
+    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}
+</code></pre></div><h3 id="hdu2002httpacmhdueducnshowproblemphppid2002"><a href="http://acm.hdu.edu.cn/showproblem.php?pid=2002">hdu2002</a></h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;cstdio&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">using</span> <span style="color:#66d9ef">namespace</span> std;
+<span style="color:#66d9ef">const</span> <span style="color:#66d9ef">double</span> PI <span style="color:#f92672">=</span> <span style="color:#ae81ff">3.1415927</span>;
+
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+    <span style="color:#66d9ef">double</span> r;
+    <span style="color:#66d9ef">while</span> (<span style="color:#f92672">~</span>scanf(<span style="color:#e6db74">&#34;%lf&#34;</span>, <span style="color:#f92672">&amp;</span>r)) {
+        printf(<span style="color:#e6db74">&#34;%.3f</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, (<span style="color:#ae81ff">4</span> <span style="color:#f92672">*</span> PI <span style="color:#f92672">*</span> r <span style="color:#f92672">*</span> r <span style="color:#f92672">*</span> r) <span style="color:#f92672">/</span> <span style="color:#ae81ff">3</span>);
+    }
+    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}
+</code></pre></div><h3 id="hdu2003httpacmhdueducnshowproblemphppid2003"><a href="http://acm.hdu.edu.cn/showproblem.php?pid=2003">hdu2003</a></h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;cmath&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;cstdio&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">using</span> <span style="color:#66d9ef">namespace</span> std;
+<span style="color:#66d9ef">const</span> <span style="color:#66d9ef">double</span> PI <span style="color:#f92672">=</span> <span style="color:#ae81ff">3.1415927</span>;
+
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+    <span style="color:#66d9ef">double</span> n;
+    <span style="color:#66d9ef">while</span> (<span style="color:#f92672">~</span>scanf(<span style="color:#e6db74">&#34;%lf&#34;</span>, <span style="color:#f92672">&amp;</span>n)) {
+        printf(<span style="color:#e6db74">&#34;%.2f</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, fabs(n));
+    }
+    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}
+</code></pre></div><h3 id="hdu2004httpacmhdueducnshowproblemphppid2004"><a href="http://acm.hdu.edu.cn/showproblem.php?pid=2004">hdu2004</a></h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;cstdio&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">using</span> <span style="color:#66d9ef">namespace</span> std;
+
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+    <span style="color:#66d9ef">int</span> t;
+    <span style="color:#66d9ef">while</span> (<span style="color:#f92672">~</span>scanf(<span style="color:#e6db74">&#34;%d&#34;</span>, <span style="color:#f92672">&amp;</span>t)) {
+        <span style="color:#66d9ef">char</span> c;
+        <span style="color:#66d9ef">if</span> (t <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">100</span> <span style="color:#f92672">||</span> t <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">0</span>) {
+            printf(<span style="color:#e6db74">&#34;Score is error!</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+            <span style="color:#66d9ef">continue</span>;
+        } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (t <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">90</span>) {
+            c <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;A&#39;</span>;
+        } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (t <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">80</span>) {
+            c <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;B&#39;</span>;
+        } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (t <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">70</span>) {
+            c <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;C&#39;</span>;
+        } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (t <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">60</span>) {
+            c <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;D&#39;</span>;
+        } <span style="color:#66d9ef">else</span> {
+            c <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;E&#39;</span>;
+        }
+        printf(<span style="color:#e6db74">&#34;%c</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, c);
+    }
+    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}
+</code></pre></div><h3 id="hdu2005httpacmhdueducnshowproblemphppid2005"><a href="http://acm.hdu.edu.cn/showproblem.php?pid=2005">hdu2005</a></h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;cstdio&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">using</span> <span style="color:#66d9ef">namespace</span> std;
+
+<span style="color:#66d9ef">bool</span> <span style="color:#a6e22e">yy</span>(<span style="color:#66d9ef">int</span> y) {
+    <span style="color:#66d9ef">if</span> ((y <span style="color:#f92672">%</span> <span style="color:#ae81ff">4</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">&amp;&amp;</span> y <span style="color:#f92672">%</span> <span style="color:#ae81ff">100</span> <span style="color:#f92672">!=</span> <span style="color:#ae81ff">0</span>) <span style="color:#f92672">||</span> (y <span style="color:#f92672">%</span> <span style="color:#ae81ff">400</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>)) {
+        <span style="color:#66d9ef">return</span> true;
+    }
+    <span style="color:#66d9ef">return</span> false;
+}
+
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">dd</span>(<span style="color:#66d9ef">int</span> y, <span style="color:#66d9ef">int</span> m) {
+    <span style="color:#66d9ef">switch</span> (m) {
+    <span style="color:#66d9ef">case</span> <span style="color:#ae81ff">4</span><span style="color:#f92672">:</span>
+    <span style="color:#66d9ef">case</span> <span style="color:#ae81ff">6</span><span style="color:#f92672">:</span>
+    <span style="color:#66d9ef">case</span> <span style="color:#ae81ff">9</span><span style="color:#f92672">:</span>
+    <span style="color:#66d9ef">case</span> <span style="color:#ae81ff">11</span><span style="color:#f92672">:</span>
+        <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">30</span>;
+    <span style="color:#66d9ef">case</span> <span style="color:#ae81ff">2</span><span style="color:#f92672">:</span>
+        <span style="color:#66d9ef">return</span> yy(y) <span style="color:#f92672">?</span> <span style="color:#ae81ff">29</span> <span style="color:#f92672">:</span> <span style="color:#ae81ff">28</span>;
+    <span style="color:#66d9ef">default</span><span style="color:#f92672">:</span>
+        <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">31</span>;
+    }
+}
+
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+    <span style="color:#66d9ef">int</span> y, m, d;
+    <span style="color:#66d9ef">while</span> (<span style="color:#f92672">~</span>scanf(<span style="color:#e6db74">&#34;%d/%d/%d&#34;</span>, <span style="color:#f92672">&amp;</span>y, <span style="color:#f92672">&amp;</span>m, <span style="color:#f92672">&amp;</span>d)) {
+        <span style="color:#66d9ef">int</span> ans <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+        <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>; i <span style="color:#f92672">&lt;</span> m; i<span style="color:#f92672">++</span>) {
+            ans <span style="color:#f92672">+=</span> dd(y, i);
+        }
+        ans <span style="color:#f92672">+=</span> d;
+        printf(<span style="color:#e6db74">&#34;%d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, ans);
+    }
+    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}
+</code></pre></div><h3 id="hdu2006httpacmhdueducnshowproblemphppid2006"><a href="http://acm.hdu.edu.cn/showproblem.php?pid=2006">hdu2006</a></h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;cstdio&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">using</span> <span style="color:#66d9ef">namespace</span> std;
+<span style="color:#66d9ef">typedef</span> <span style="color:#66d9ef">long</span> <span style="color:#66d9ef">long</span> ll;
+
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+    ll n, m, ans <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+    <span style="color:#66d9ef">while</span> (<span style="color:#f92672">~</span>scanf(<span style="color:#e6db74">&#34;%lld&#34;</span>, <span style="color:#f92672">&amp;</span>n)) {
+        ans <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+        <span style="color:#66d9ef">while</span> (n<span style="color:#f92672">--</span>) {
+            scanf(<span style="color:#e6db74">&#34;%lld&#34;</span>, <span style="color:#f92672">&amp;</span>m);
+            <span style="color:#66d9ef">if</span> (m <span style="color:#f92672">&amp;</span> <span style="color:#ae81ff">1</span>) {
+                ans <span style="color:#f92672">*=</span> m;
+            }
+        }
+        printf(<span style="color:#e6db74">&#34;%lld</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, ans);
+    }
+    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}
+</code></pre></div><h3 id="hdu2007httpacmhdueducnshowproblemphppid2007"><a href="http://acm.hdu.edu.cn/showproblem.php?pid=2007">hdu2007</a></h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;cstdio&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">using</span> <span style="color:#66d9ef">namespace</span> std;
+
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+    <span style="color:#66d9ef">int</span> l, r, ans1 <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, ans2 <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+    <span style="color:#66d9ef">while</span> (<span style="color:#f92672">~</span>scanf(<span style="color:#e6db74">&#34;%d %d&#34;</span>, <span style="color:#f92672">&amp;</span>l, <span style="color:#f92672">&amp;</span>r)) {
+        ans1 <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, ans2 <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+        <span style="color:#66d9ef">if</span> (l <span style="color:#f92672">&gt;</span> r) {
+            swap(l, r);
+        }
+        <span style="color:#66d9ef">for</span> (; l <span style="color:#f92672">&lt;=</span> r; l<span style="color:#f92672">++</span>) {
+            <span style="color:#66d9ef">if</span> (l <span style="color:#f92672">&amp;</span> <span style="color:#ae81ff">1</span>) {
+                ans2 <span style="color:#f92672">+=</span> l <span style="color:#f92672">*</span> l <span style="color:#f92672">*</span> l;
+            } <span style="color:#66d9ef">else</span> {
+                ans1 <span style="color:#f92672">+=</span> l <span style="color:#f92672">*</span> l;
+            }
+        }
+        printf(<span style="color:#e6db74">&#34;%d %d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, ans1, ans2);
+    }
+    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}
+</code></pre></div><h3 id="hdu2008httpacmhdueducnshowproblemphppid2008"><a href="http://acm.hdu.edu.cn/showproblem.php?pid=2008">hdu2008</a></h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;cstdio&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">using</span> <span style="color:#66d9ef">namespace</span> std;
+
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+    <span style="color:#66d9ef">int</span> n, a, b, c;
+    <span style="color:#66d9ef">double</span> t;
+    <span style="color:#66d9ef">while</span> ((<span style="color:#f92672">~</span>scanf(<span style="color:#e6db74">&#34;%d&#34;</span>, <span style="color:#f92672">&amp;</span>n)) <span style="color:#f92672">&amp;&amp;</span> n) {
+        a <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, b <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, c <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+        <span style="color:#66d9ef">while</span> (n<span style="color:#f92672">--</span>) {
+            scanf(<span style="color:#e6db74">&#34;%lf&#34;</span>, <span style="color:#f92672">&amp;</span>t);
+            <span style="color:#66d9ef">if</span> (t <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">0</span>) {
+                a<span style="color:#f92672">++</span>;
+            } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (t <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>) {
+                b<span style="color:#f92672">++</span>;
+            } <span style="color:#66d9ef">else</span> {
+                c<span style="color:#f92672">++</span>;
+            }
+        }
+        printf(<span style="color:#e6db74">&#34;%d %d %d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, a, b, c);
+    }
+    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}
+</code></pre></div><h3 id="hdu2009httpacmhdueducnshowproblemphppid2009"><a href="http://acm.hdu.edu.cn/showproblem.php?pid=2009">hdu2009</a></h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;cstdio&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">using</span> <span style="color:#66d9ef">namespace</span> std;
+
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+    <span style="color:#66d9ef">double</span> n, ans;
+    <span style="color:#66d9ef">int</span> m;
+    <span style="color:#66d9ef">while</span> (<span style="color:#f92672">~</span>scanf(<span style="color:#e6db74">&#34;%lf %d&#34;</span>, <span style="color:#f92672">&amp;</span>n, <span style="color:#f92672">&amp;</span>m)) {
+        ans <span style="color:#f92672">=</span> n;
+        <span style="color:#f92672">--</span>m;
+        <span style="color:#66d9ef">while</span> (m<span style="color:#f92672">--</span>) {
+            n <span style="color:#f92672">=</span> sqrt(n);
+            ans <span style="color:#f92672">+=</span> n;
+        }
+        printf(<span style="color:#e6db74">&#34;%.2f</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, ans);
+    }
+    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}
+</code></pre></div></article>
+    </section>
+
+    <footer class="ui attached segment dream-tags">
+      
+        
+          <a class="ui label" href="/tags/%E6%B0%B4%E9%A2%98" title="水题">水题</a>
+        
+      
+      <div
+        class="ui label"
+        style="float: right; cursor: pointer;"
+        onclick="savePostAsImg()">
+        <i class="save icon"></i>保存为图片
+      </div>
+
+      <div class="post-comment">
+        
+          
+  
+  <div id="vcomments"></div>
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+
+  <script type="text/javascript">
+    new Valine({
+        el: '#vcomments' ,
+        appId: 'WD6wM9CTAisHjbmFebYTsuVJ-gzGzoHsz',
+        appKey: 'wEmvU15gOYJvTpUOzh0HnwQX',
+        notify: 'false', 
+        verify: 'false', 
+        avatar:'mm', 
+        placeholder: '不会吧，不会吧，不会真有人看完博客不发评论吧...',
+        visitor: 'true'
+    });
+  </script>
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+  <div class="sixteen wide mobile sixteen wide tablet four wide computer column">
+    <article class="dream-header">
+  <section class="ui top attached center aligned segment">
+    <div class="ui small circular image">
+      
+        <img src="/images/avatar.jpg">
+      
+    </div>
+
+    <h1 class="ui medium header">Shaco 的博客<div class="sub header" style="margin-top: 0.5rem;">但行好事，莫问前程</div>
+    </h1>
+
+    <div class="ui horizontal list">
+      
+      <a class="item" href="/tags">
+        <i class="tags icon" title="所有标签"></i>
+      </a>
+      <a class="item" href="/categories">
+        <i class="th list icon" title="所有分类"></i>
+      </a>
+    </div>
+  </section>
+
+  
+  <section class="ui attached center aligned segment dream-tags">
+    
+      <a class="ui label" href="/tags/%E6%B0%B4%E9%A2%98" title="水题">水题</a>
+    
+      <a class="ui label" href="/tags/%E8%B5%9B%E5%90%8E%E6%80%BB%E7%BB%93" title="赛后总结">赛后总结</a>
+    
+  </section>
+  
+
+  
+  <section class="ui attached segment dream-categories">
+    <div class="ui accordion">
+      
+        <div class="title">
+          <i class="dropdown icon"></i>
+          <a href="/categories/acm" class="item">acm</a>
+        </div>
+        <div class="content">
+          <div class="ui list">
+          
+            <div class="item">
+              <div class="content">
+                <a href="/post/hdu100%E9%A2%98/" class="item">Hdu100题</a>
+              </div>
+            </div>
+          
+            <div class="item">
+              <div class="content">
+                <a href="/post/2020hncpc%E8%B5%9B%E5%90%8E%E6%80%BB%E7%BB%93/" class="item">2020hncpc赛后总结</a>
+              </div>
+            </div>
+          
+          </div>
+        </div>
+      
+    </div>
+  </section>
+  
+
+  <section class="ui attached segment header-socials">
+    <nav class="ui secondary menu dream-menu dream-socials">
+  
+    <div class="item">
+      <a href="mailto:zhoukj0702@foxmail.com">
+        <i class=" mail icon" title="email"></i>
+      </a>
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</nav>
+
+  </section>
+
+  <section class="ui bottom attached center aligned segment">
+    
+      <p>© 2020 Shaco&#39;s blog</p>
+    
+
+    <p>Powered by <a href="https://gohugo.io/" target="_blank">Hugo</a> with theme <a href="https://github.com/g1eny0ung/hugo-theme-dream" target="_blank">Dream</a>.</p>
+  </section>
+</article>
+
+  </div>
+</div>
+
+        </section>
+        <section class="back">
+          
+<nav class="ui secondary inverted menu dream-menu">
+
+  <div class="item">
+    <i class="large link bullseye icon dream-flip-toggle" title="翻转！"></i>
+  </div>
+  <div class="item">
+    <i class="large link home icon" title="首页" onclick="window.location.href = 'https:\/\/Sh4c0.github.io\/'"></i>
+  </div>
+  <div class="item">
+    <i class="large link icon theme-switch" onclick="themeSwitch()"></i>
+  </div>
+</nav>
+
+          <div class="ui centered relaxed grid dream-grid dream-back">
+  
+  
+  
+
+  <section class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
+    <article>
+      <div class="ui top attached segment">
+        <h3 class="ui header">社交链接</h3>
+      </div>
+      <div class="ui attached segment">
+        <nav class="ui secondary menu dream-menu dream-socials">
+  
+    <div class="item">
+      <a href="mailto:zhoukj0702@foxmail.com">
+        <i class="large mail icon" title="email"></i>
+      </a>
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</nav>
+
+      </div>
+    </article>
+  </section>
+
+  <section class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
+    
+  </section>
+
+  
+    
+  
+</div>
+
+        </section>
+      </div>
+    </div>
+
+    <script src="/js/jquery.min.js"></script>
+<script src="/js/semantic.min.js"></script>
+<script src="/js/imagesloaded.pkgd.min.js"></script>
+<script src="/js/masonry.pkgd.min.js"></script>
+<script src="/js/nav.js"></script>
+<script src="/js/header.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/theme.js"></script>
+
+    
+<script src="/js/html2canvas.min.js"></script>
+
+
+    
+      
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-98295641-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+    
+  </body>
+</html>
