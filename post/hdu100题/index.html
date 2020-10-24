@@ -91,7 +91,7 @@ hdu100题
       <header style="margin-top: 0 !important;">
         <h2 class="ui header">
           hdu100题
-          <div class="sub header">@ shaco · Thursday, Oct 22, 2020 · 7 分钟阅读 · 更新于 Oct 22, 2020</div>
+          <div class="sub header">@ shaco · Thursday, Oct 22, 2020 · 11 分钟阅读 · 更新于 Oct 22, 2020</div>
         </h2>
       </header>
 
@@ -121,6 +121,16 @@ hdu100题
 <li><a href="#hdu2017">hdu2017</a></li>
 <li><a href="#hdu2018">hdu2018</a></li>
 <li><a href="#hdu2019">hdu2019</a></li>
+<li><a href="#hdu2020">hdu2020</a></li>
+<li><a href="#hdu2021">hdu2021</a></li>
+<li><a href="#hdu2022">hdu2022</a></li>
+<li><a href="#hdu2023">hdu2023</a></li>
+<li><a href="#hdu2024">hdu2024</a></li>
+<li><a href="#hdu2025">hdu2025</a></li>
+<li><a href="#hdu2026">hdu2026</a></li>
+<li><a href="#hdu2027">hdu2027</a></li>
+<li><a href="#hdu2028">hdu2028</a></li>
+<li><a href="#hdu2029">hdu2029</a></li>
 </ul>
 <!-- raw HTML omitted -->
 <h3 id="前言">前言</h3>
@@ -600,7 +610,290 @@ hdu100题
     }
     <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
 }
+</code></pre></div><h3 id="hdu2020">hdu2020</h3>
+<p><a href="http://acm.hdu.edu.cn/showproblem.php?pid=2020">传送门</a></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;bits/stdc++.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">using</span> <span style="color:#66d9ef">namespace</span> std;
 
+<span style="color:#66d9ef">inline</span> <span style="color:#66d9ef">bool</span> <span style="color:#a6e22e">cmp</span>(<span style="color:#66d9ef">int</span> a, <span style="color:#66d9ef">int</span> b) {
+    <span style="color:#66d9ef">return</span> abs(a) <span style="color:#f92672">&gt;</span> abs(b);
+}
+
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+    <span style="color:#66d9ef">int</span> n, arr[<span style="color:#ae81ff">105</span>];
+    <span style="color:#66d9ef">while</span> (scanf(<span style="color:#e6db74">&#34;%d&#34;</span>, <span style="color:#f92672">&amp;</span>n), n) {
+        <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> n; i<span style="color:#f92672">++</span>) {
+            scanf(<span style="color:#e6db74">&#34;%d&#34;</span>, <span style="color:#f92672">&amp;</span>arr[i]);
+        }
+        sort(arr, arr <span style="color:#f92672">+</span> n, cmp);
+        printf(<span style="color:#e6db74">&#34;%d&#34;</span>, arr[<span style="color:#ae81ff">0</span>]);
+        <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>; i <span style="color:#f92672">&lt;</span> n; i<span style="color:#f92672">++</span>) {
+            printf(<span style="color:#e6db74">&#34; %d&#34;</span>, arr[i]);
+        }
+        printf(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+    }
+    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}
+</code></pre></div><h3 id="hdu2021">hdu2021</h3>
+<p><a href="http://acm.hdu.edu.cn/showproblem.php?pid=2021">传送门</a></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;bits/stdc++.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">using</span> <span style="color:#66d9ef">namespace</span> std;
+
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+    <span style="color:#66d9ef">int</span> n, t, ans, arr[<span style="color:#ae81ff">6</span>] <span style="color:#f92672">=</span> {<span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">50</span>, <span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">1</span>};
+    <span style="color:#66d9ef">while</span> (scanf(<span style="color:#e6db74">&#34;%d&#34;</span>, <span style="color:#f92672">&amp;</span>n), n) {
+        ans <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+        <span style="color:#66d9ef">while</span> (n<span style="color:#f92672">--</span>) {
+            scanf(<span style="color:#e6db74">&#34;%d&#34;</span>, <span style="color:#f92672">&amp;</span>t);
+            <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">6</span>; i<span style="color:#f92672">++</span>) {
+                ans <span style="color:#f92672">+=</span> t <span style="color:#f92672">/</span> arr[i];
+                t <span style="color:#f92672">%=</span> arr[i];
+            }
+        }
+        printf(<span style="color:#e6db74">&#34;%d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, ans);
+    }
+    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}
+</code></pre></div><h3 id="hdu2022">hdu2022</h3>
+<p><a href="http://acm.hdu.edu.cn/showproblem.php?pid=2022">传送门</a></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;bits/stdc++.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">using</span> <span style="color:#66d9ef">namespace</span> std;
+<span style="color:#66d9ef">typedef</span> <span style="color:#66d9ef">long</span> <span style="color:#66d9ef">long</span> ll;
+
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+    <span style="color:#66d9ef">int</span> n, m, t, maxi, maxj, mmax;
+    <span style="color:#66d9ef">while</span> (<span style="color:#f92672">~</span>scanf(<span style="color:#e6db74">&#34;%d %d&#34;</span>, <span style="color:#f92672">&amp;</span>n, <span style="color:#f92672">&amp;</span>m)) {
+        mmax <span style="color:#f92672">=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>;
+        <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>; i <span style="color:#f92672">&lt;=</span> n; i<span style="color:#f92672">++</span>) {
+            <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> j <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>; j <span style="color:#f92672">&lt;=</span> m; j<span style="color:#f92672">++</span>) {
+                scanf(<span style="color:#e6db74">&#34;%d&#34;</span>, <span style="color:#f92672">&amp;</span>t);
+                <span style="color:#66d9ef">if</span> (abs(mmax) <span style="color:#f92672">&lt;</span> abs(t)) {
+                    mmax <span style="color:#f92672">=</span> t;
+                    maxi <span style="color:#f92672">=</span> i;
+                    maxj <span style="color:#f92672">=</span> j;
+                }
+            }
+        }
+        printf(<span style="color:#e6db74">&#34;%d %d %d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, maxi, maxj, mmax);
+    }
+    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}
+</code></pre></div><h3 id="hdu2023">hdu2023</h3>
+<p><a href="http://acm.hdu.edu.cn/showproblem.php?pid=2023">传送门</a></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;bits/stdc++.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">using</span> <span style="color:#66d9ef">namespace</span> std;
+
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+    <span style="color:#66d9ef">int</span> n, m, cnt;
+    <span style="color:#66d9ef">double</span> arr[<span style="color:#ae81ff">55</span>][<span style="color:#ae81ff">10</span>], sumi[<span style="color:#ae81ff">55</span>], sumj[<span style="color:#ae81ff">10</span>];
+    <span style="color:#66d9ef">while</span> (<span style="color:#f92672">~</span>scanf(<span style="color:#e6db74">&#34;%d %d&#34;</span>, <span style="color:#f92672">&amp;</span>n, <span style="color:#f92672">&amp;</span>m)) {
+        cnt <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+        memset(sumi, <span style="color:#ae81ff">0</span>, <span style="color:#66d9ef">sizeof</span>(sumi));
+        memset(sumj, <span style="color:#ae81ff">0</span>, <span style="color:#66d9ef">sizeof</span>(sumj));
+        <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> n; i<span style="color:#f92672">++</span>) {
+            <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> j <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; j <span style="color:#f92672">&lt;</span> m; j<span style="color:#f92672">++</span>) {
+                scanf(<span style="color:#e6db74">&#34;%lf&#34;</span>, <span style="color:#f92672">&amp;</span>arr[i][j]);
+                sumi[i] <span style="color:#f92672">+=</span> arr[i][j];
+                sumj[j] <span style="color:#f92672">+=</span> arr[i][j];
+            }
+            sumi[i] <span style="color:#f92672">/=</span> m;
+        }
+        <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> m; i<span style="color:#f92672">++</span>) {
+            sumj[i] <span style="color:#f92672">/=</span> n;
+        }
+        printf(<span style="color:#e6db74">&#34;%.2f&#34;</span>, sumi[<span style="color:#ae81ff">0</span>]);
+        <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>; i <span style="color:#f92672">&lt;</span> n; i<span style="color:#f92672">++</span>) {
+            printf(<span style="color:#e6db74">&#34; %.2f&#34;</span>, sumi[i]);
+        }
+        printf(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">%.2f&#34;</span>, sumj[<span style="color:#ae81ff">0</span>]);
+        <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>; i <span style="color:#f92672">&lt;</span> m; i<span style="color:#f92672">++</span>) {
+            printf(<span style="color:#e6db74">&#34; %.2f&#34;</span>, sumj[i]);
+        }
+        <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> n; i<span style="color:#f92672">++</span>) {
+            <span style="color:#66d9ef">bool</span> ok <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+            <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> j <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; j <span style="color:#f92672">&lt;</span> m <span style="color:#f92672">&amp;&amp;</span> ok; j<span style="color:#f92672">++</span>) {
+                <span style="color:#66d9ef">if</span> (arr[i][j] <span style="color:#f92672">&lt;</span> sumj[j]) {
+                    ok <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+                }
+            }
+            <span style="color:#66d9ef">if</span> (ok) {
+                cnt<span style="color:#f92672">++</span>;
+            }
+        }
+        printf(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">%d</span><span style="color:#ae81ff">\n\n</span><span style="color:#e6db74">&#34;</span>, cnt);
+    }
+    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}
+</code></pre></div><h3 id="hdu2024">hdu2024</h3>
+<p><a href="http://acm.hdu.edu.cn/showproblem.php?pid=2024">传送门</a></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;bits/stdc++.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">using</span> <span style="color:#66d9ef">namespace</span> std;
+
+<span style="color:#66d9ef">inline</span> <span style="color:#66d9ef">bool</span> <span style="color:#a6e22e">f</span>(<span style="color:#66d9ef">char</span> c) {
+    <span style="color:#66d9ef">if</span> ((c <span style="color:#f92672">&gt;=</span> <span style="color:#e6db74">&#39;0&#39;</span> <span style="color:#f92672">&amp;&amp;</span> c <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;9&#39;</span>) <span style="color:#f92672">||</span> (c <span style="color:#f92672">&gt;=</span> <span style="color:#e6db74">&#39;a&#39;</span> <span style="color:#f92672">&amp;&amp;</span> c <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;z&#39;</span>) <span style="color:#f92672">||</span> (c <span style="color:#f92672">&gt;=</span> <span style="color:#e6db74">&#39;A&#39;</span> <span style="color:#f92672">&amp;&amp;</span> c <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;Z&#39;</span>) <span style="color:#f92672">||</span> c <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;_&#39;</span>) {
+        <span style="color:#66d9ef">return</span> true;
+    }
+    <span style="color:#66d9ef">return</span> false;
+}
+
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+    <span style="color:#66d9ef">int</span> n;
+    <span style="color:#66d9ef">char</span> s[<span style="color:#ae81ff">55</span>];
+    <span style="color:#66d9ef">bool</span> ok;
+    scanf(<span style="color:#e6db74">&#34;%d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, <span style="color:#f92672">&amp;</span>n);
+    <span style="color:#66d9ef">while</span> (n<span style="color:#f92672">--</span>) {
+        ok <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+        gets(s);
+        <span style="color:#66d9ef">if</span> (s[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">&gt;=</span> <span style="color:#e6db74">&#39;0&#39;</span> <span style="color:#f92672">&amp;&amp;</span> s[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;9&#39;</span>) {
+            printf(<span style="color:#e6db74">&#34;no</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+            ok <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+        }
+        <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> strlen(s) <span style="color:#f92672">&amp;&amp;</span> ok; i<span style="color:#f92672">++</span>) {
+            <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span>f(s[i])) {
+                printf(<span style="color:#e6db74">&#34;no</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+                ok <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+            }
+        }
+        <span style="color:#66d9ef">if</span> (ok) {
+            printf(<span style="color:#e6db74">&#34;yes</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+        }
+    }
+    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}
+</code></pre></div><h3 id="hdu2025">hdu2025</h3>
+<p><a href="http://acm.hdu.edu.cn/showproblem.php?pid=2025">传送门</a></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;bits/stdc++.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">using</span> <span style="color:#66d9ef">namespace</span> std;
+
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+    <span style="color:#66d9ef">char</span> s[<span style="color:#ae81ff">105</span>], a;
+    <span style="color:#66d9ef">while</span> (<span style="color:#f92672">~</span>scanf(<span style="color:#e6db74">&#34;%s&#34;</span>, s)) {
+        a <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;a&#39;</span>;
+        <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> strlen(s); i<span style="color:#f92672">++</span>) {
+            <span style="color:#66d9ef">if</span> (a <span style="color:#f92672">&lt;</span> s[i]) {
+                a <span style="color:#f92672">=</span> s[i];
+            }
+        }
+        <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> strlen(s); i<span style="color:#f92672">++</span>) {
+            <span style="color:#66d9ef">if</span> (s[i] <span style="color:#f92672">==</span> a) {
+                printf(<span style="color:#e6db74">&#34;%c(max)&#34;</span>, s[i]);
+            } <span style="color:#66d9ef">else</span> {
+                printf(<span style="color:#e6db74">&#34;%c&#34;</span>, s[i]);
+            }
+        }
+        printf(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+    }
+    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}
+</code></pre></div><h3 id="hdu2026">hdu2026</h3>
+<p><a href="http://acm.hdu.edu.cn/showproblem.php?pid=2026">传送门</a></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;bits/stdc++.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">using</span> <span style="color:#66d9ef">namespace</span> std;
+
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+    <span style="color:#66d9ef">char</span> s[<span style="color:#ae81ff">105</span>];
+    <span style="color:#66d9ef">while</span> (gets(s) <span style="color:#f92672">!=</span> NULL) {
+        <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> strlen(s); i<span style="color:#f92672">++</span>) {
+            <span style="color:#66d9ef">if</span> (i <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">||</span> s[i <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>] <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39; &#39;</span>) {
+                printf(<span style="color:#e6db74">&#34;%c&#34;</span>, s[i] <span style="color:#f92672">-</span> <span style="color:#ae81ff">32</span>);
+            } <span style="color:#66d9ef">else</span> {
+                printf(<span style="color:#e6db74">&#34;%c&#34;</span>, s[i]);
+            }
+        }
+        printf(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+    }
+    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}
+</code></pre></div><h3 id="hdu2027">hdu2027</h3>
+<p><a href="http://acm.hdu.edu.cn/showproblem.php?pid=2027">传送门</a></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;bits/stdc++.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">using</span> <span style="color:#66d9ef">namespace</span> std;
+
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+    <span style="color:#66d9ef">int</span> n, cnt[<span style="color:#ae81ff">5</span>];
+    <span style="color:#66d9ef">char</span> s[<span style="color:#ae81ff">105</span>];
+    <span style="color:#66d9ef">char</span> y[<span style="color:#ae81ff">5</span>] <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;a&#39;</span>, <span style="color:#e6db74">&#39;e&#39;</span>, <span style="color:#e6db74">&#39;i&#39;</span>, <span style="color:#e6db74">&#39;o&#39;</span>, <span style="color:#e6db74">&#39;u&#39;</span>};
+    scanf(<span style="color:#e6db74">&#34;%d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, <span style="color:#f92672">&amp;</span>n);
+    <span style="color:#66d9ef">while</span> (n<span style="color:#f92672">--</span>) {
+        memset(cnt, <span style="color:#ae81ff">0</span>, <span style="color:#66d9ef">sizeof</span>(cnt));
+        gets(s);
+        <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> strlen(s); i<span style="color:#f92672">++</span>) {
+            <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> j <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; j <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">5</span>; j<span style="color:#f92672">++</span>) {
+                <span style="color:#66d9ef">if</span> (s[i] <span style="color:#f92672">==</span> y[j]) {
+                    cnt[j]<span style="color:#f92672">++</span>;
+                    <span style="color:#66d9ef">break</span>;
+                }
+            }
+        }
+        <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">5</span>; i<span style="color:#f92672">++</span>) {
+            printf(<span style="color:#e6db74">&#34;%c:%d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, y[i], cnt[i]);
+        }
+        <span style="color:#66d9ef">if</span> (n <span style="color:#f92672">!=</span> <span style="color:#ae81ff">0</span>) {
+            printf(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+        }
+    }
+    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}
+</code></pre></div><h3 id="hdu2028">hdu2028</h3>
+<p><a href="http://acm.hdu.edu.cn/showproblem.php?pid=2028">传送门</a></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;bits/stdc++.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">using</span> <span style="color:#66d9ef">namespace</span> std;
+<span style="color:#66d9ef">typedef</span> <span style="color:#66d9ef">long</span> <span style="color:#66d9ef">long</span> ll;
+
+<span style="color:#66d9ef">inline</span> ll <span style="color:#a6e22e">gcd</span>(ll a, ll b) {
+    ll t;
+    <span style="color:#66d9ef">while</span> (b <span style="color:#f92672">!=</span> <span style="color:#ae81ff">0</span>) {
+        t <span style="color:#f92672">=</span> a;
+        a <span style="color:#f92672">=</span> b;
+        b <span style="color:#f92672">=</span> t <span style="color:#f92672">%</span> b;
+    }
+    <span style="color:#66d9ef">return</span> a;
+}
+
+<span style="color:#66d9ef">inline</span> ll <span style="color:#a6e22e">lcm</span>(ll a, ll b) {
+    <span style="color:#66d9ef">return</span> a <span style="color:#f92672">*</span> b <span style="color:#f92672">/</span> gcd(a, b);
+}
+
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+    ll n, m, ans;
+    <span style="color:#66d9ef">while</span> (<span style="color:#f92672">~</span>scanf(<span style="color:#e6db74">&#34;%lld&#34;</span>, <span style="color:#f92672">&amp;</span>n)) {
+        scanf(<span style="color:#e6db74">&#34;%lld&#34;</span>, <span style="color:#f92672">&amp;</span>ans);
+        n<span style="color:#f92672">--</span>;
+        <span style="color:#66d9ef">while</span> (n<span style="color:#f92672">--</span>) {
+            scanf(<span style="color:#e6db74">&#34;%lld&#34;</span>, <span style="color:#f92672">&amp;</span>m);
+            ans <span style="color:#f92672">=</span> lcm(ans, m);
+        }
+        printf(<span style="color:#e6db74">&#34;%lld</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, ans);
+    }
+    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}
+</code></pre></div><h3 id="hdu2029">hdu2029</h3>
+<p><a href="http://acm.hdu.edu.cn/showproblem.php?pid=2029">传送门</a></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#75715e">#include</span><span style="color:#75715e">&lt;bits/stdc++.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">using</span> <span style="color:#66d9ef">namespace</span> std;
+
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>(){
+    <span style="color:#66d9ef">int</span> n,len,ok;
+    <span style="color:#66d9ef">char</span> s[<span style="color:#ae81ff">1000</span>];
+    scanf(<span style="color:#e6db74">&#34;%d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>,<span style="color:#f92672">&amp;</span>n);
+    <span style="color:#66d9ef">while</span>(n<span style="color:#f92672">--</span>){
+        gets(s);
+        ok<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>;
+        len<span style="color:#f92672">=</span>strlen(s);
+        <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> i<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>,j<span style="color:#f92672">=</span>len<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>;i<span style="color:#f92672">&lt;</span>len;i<span style="color:#f92672">++</span>,j<span style="color:#f92672">--</span>){
+            <span style="color:#66d9ef">if</span>(s[i]<span style="color:#f92672">!=</span>s[j]){
+                ok<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>;
+                <span style="color:#66d9ef">break</span>;
+            }
+        }
+        <span style="color:#66d9ef">if</span>(ok){
+            printf(<span style="color:#e6db74">&#34;yes</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+        }<span style="color:#66d9ef">else</span>{
+            printf(<span style="color:#e6db74">&#34;no</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+        }
+    }
+    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}
 </code></pre></div></article>
     </section>
 
